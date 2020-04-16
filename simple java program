@@ -1,0 +1,214 @@
+import java.io.*;
+
+class Table {
+
+public static void main(String args[])
+
+throws IOException
+
+{
+
+
+System.out.println("press 1 for addition" + "\n" + "press 2 for table" + "\n" + "press 3 for largest"+ "\n" + "press 4 for smallest" + "\n" + "press 5 for reverse");
+
+BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
+
+String str2;
+
+str2 = br2.readLine();
+
+
+
+int c = Integer.parseInt(str2);
+
+if (c==1)
+
+{
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+
+
+String str;
+
+String str1;
+
+System.out.println("Enter first number");
+
+do {
+
+str = br.readLine();
+
+System.out.println("Enter second number");
+
+str1 = br1.readLine();
+
+int a = Integer.parseInt(str);
+
+int b = Integer.parseInt(str1);
+
+
+System.out.println(a+b);
+
+} while (!str.equals("stop") ) ;
+
+}
+
+else if (c==2)
+
+{
+
+System.out.println("Enter which number table you want");
+
+BufferedReader br3 = new BufferedReader(new InputStreamReader(System.in));
+
+String str3;
+
+str3 = br3.readLine();
+
+int d = Integer.parseInt(str3);
+
+int e;
+
+for(e=1;e<=10;e=e+1)
+
+System.out.println(e*d);
+
+}
+
+else if (c==3)
+
+{
+
+System.out.println("Enter first number");
+
+BufferedReader br4 = new BufferedReader(new InputStreamReader(System.in));
+
+String str4;
+
+str4 = br4.readLine();
+
+int f = Integer.parseInt(str4);
+
+
+System.out.println("Enter second number");
+
+BufferedReader br5 = new BufferedReader(new InputStreamReader(System.in));
+
+String str5;
+
+str5 = br5.readLine();
+
+int g = Integer.parseInt(str5);
+
+System.out.println("Enter third number");
+
+BufferedReader br6 = new BufferedReader(new InputStreamReader(System.in));
+
+String str6;
+
+str6 = br6.readLine();
+
+int h = Integer.parseInt(str6);
+
+ if(f > g && f > h)
+      {
+         System.out.println("first number is largest");
+      }
+      else if(g > f && g > h)
+      {
+         System.out.println("second number is largest");
+      }
+      else if(h > f && h > g)
+      {
+         System.out.println("third number is largest");
+      }
+      else
+      {
+         System.out.println("numbers are not distinct");
+      }
+
+
+}
+
+else if (c==4)
+
+{
+
+System.out.println("Enter first number");
+
+BufferedReader br4 = new BufferedReader(new InputStreamReader(System.in));
+
+String str4;
+
+str4 = br4.readLine();
+
+int f = Integer.parseInt(str4);
+
+
+System.out.println("Enter second number");
+
+BufferedReader br5 = new BufferedReader(new InputStreamReader(System.in));
+
+String str5;
+
+str5 = br5.readLine();
+
+int g = Integer.parseInt(str5);
+
+System.out.println("Enter third number");
+
+BufferedReader br6 = new BufferedReader(new InputStreamReader(System.in));
+
+String str6;
+
+str6 = br6.readLine();
+
+int h = Integer.parseInt(str6);
+
+ if(f < g && f < h)
+      {
+         System.out.println("first number is smallest");
+      }
+      else if(g < f && g < h)
+      {
+         System.out.println("second number is smallest");
+      }
+      else if(h < f && h < g)
+      {
+         System.out.println("third number is smallest");
+      }
+      else
+      {
+         System.out.println("numbers are not distinct");
+      }
+
+
+}
+
+
+else if (c==5)
+
+{
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+String str;
+
+System.out.println("Enter number");
+
+str = br.readLine();
+
+StringBuffer j = new StringBuffer(str);
+
+j.reverse();
+
+System.out.println(j);
+
+
+}
+
+}
+
+}
